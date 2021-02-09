@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
-  background-color: rgba(43, 52, 59, 1);
+  justify-content: space-between;
+  background-color: #2b343b;
   height: 8vh;
   color: white;
   padding-left: 60px;
@@ -25,4 +25,22 @@
 
 .materia {
   color: white;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.functions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.page-title {
+  margin-right: 5vw;
+  font-size: large;
+  font-style: medium;
+  font-weight: 500;
 }

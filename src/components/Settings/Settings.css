@@ -1,0 +1,60 @@
+.moodle-config-container {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80vw;
+  margin-top: 40px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  padding: 24px;
+  padding-bottom: 40px;
+}
+.my-input {
+  background-color: #1e272e;
+  color: white;
+  border-width: 0px 0px 1px 0px;
+  border-color: #683ab7;
+  margin-left: 10px;
+  border-style: solid;
+}
+::placeholder {
+  color: rgb(194, 194, 194);
+  opacity: 1;
+}
+
+.input-container {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.configTitle {
+  font-weight: 500;
+  font-size: 17pt;
+}
+.crawler-config-container {
+  padding: 24px 0px 24px 0px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  width: 88vw;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.materia-config {
+  width: 80vw;
+  margin-top: px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-radius: 2px 10px 2px 10px;
+  justify-content: flex-start;
+  background-color: rgba(79, 84, 88, 0.5);
+}
