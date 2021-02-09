@@ -1,23 +1,22 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+import "./customButtons.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCogs } from "@fortawesome/free-solid-svg-icons";
+import Home from "./components/Home/Home";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprenda React
+      <div className="header-bar">
+        <a className="btn-config">
+          <FontAwesomeIcon icon={faCogs}></FontAwesomeIcon>
         </a>
-      </header>
+        <a className="btn-atualizar">Atualizar</a>
+      </div>
+      <div className="body-content">
+        <Home></Home>
+      </div>
     </div>
   );
 }
