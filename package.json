@@ -1,11 +1,19 @@
 {
   "name": "moodle-crawler",
   "version": "0.1.0",
-  "private": true,
+  "author": "SouzaCode",
+  "description": "Um app para raspar o Moodle da UFSC e compilar as atividades em um unico local",
+  "build": {
+    "appId": "display.menu"
+  },
+  "homepage": "./",
+  "main": "public/electron.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.6.3",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^1.2.0",
     "puppeteer": "^7.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -14,10 +22,13 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "react-start": "react-scripts start",
+    "react-build": "react-scripts build",
+    "react-test": "react-scripts test",
+    "react-eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "build": "npm run react-build && npm run electron-build",
+    "start": "concurrently \"cross-env BROWSER=none npm run react-start\" \"wait-on http://localhost:3000 && electron .\" "
   },
   "eslintConfig": {
     "extends": [
@@ -36,5 +47,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "electron-builder": "^22.9.1",
+    "wait-on": "^5.2.1",
+    "electron": "^11.2.3"
   }
 }
